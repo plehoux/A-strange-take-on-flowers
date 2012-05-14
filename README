@@ -1,0 +1,27 @@
+A strange take on flowers  
+=
+Made in 48 hours at TOJam7 by Philippe-Antoine Lehoux
+-
+
+- This is an offline two player game
+- Each player is a flower
+- You move them with [WASD] or [←↑↓→]
+- [WASD]’s attraction move is triggered by [space]
+- [←↑↓→]’s attraction move is triggered by [↩]
+- The goal is to catch the other flower's pollen
+- Flowers can’t “touch” each other
+- After 10 “touches”, it is game over
+- Remaining “touches” are illustrated by the purple bars
+- The flower who harvest the most pollen win
+
+The game could be describe as an anti-shooter where instead of avoiding 'bullets', you try to collect them.  It feature a minimalistic look, where flowers are represented by simple circles.  The score screen is also minimalistic, as it only show the flower size, the biggest is the winner.  
+  
+There is no timer, the game end after flowers collide into each other 10 times.  
+
+The game was code in coffeescript using the html 5 canvas element.  
+  
+Test in Mac OSX Chrome, Firefox and Safari browsers.  Should run find in IE 10 (should). 
+
+If the game is sluggish in fullscreen try to run it in smaller window (Dont't forget to reload the page after resize).
+
+TOjam was a real fun experience for me, tks Jim!
