@@ -25,10 +25,6 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-@font-face {
-  font-family: Mate SC;
-  src: url(/lib/fonts/Mate-SC-Regular/MateSC-Regular.otf); }
-
 body {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
