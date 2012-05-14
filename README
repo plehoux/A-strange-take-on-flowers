@@ -14,7 +14,7 @@ Made in 48 hours at TOJam7 by Philippe-Antoine Lehoux
 - Remaining “touches” are illustrated by the purple bars
 - The flower who harvest the most pollen win
 
-The game could be describe as an anti-shooter where instead of avoiding 'bullets', you try to collect them.  It feature a minimalistic look, where flowers are represented by simple circles.  The score screen is also minimalistic, as it only show the flower size, the biggest is the winner.  
+The game could be describe as an anti-shooter where instead of avoiding 'bullets', you try to collect them. It's fast pace, it feel like a dogfight. It feature a minimalistic look, where flowers are represented by simple circles.  The score screen is also minimalistic, as it only show the flowers respective size, the biggest is the winner.  
   
 There is no timer, the game end after flowers collide into each other 10 times.  
 
@@ -22,6 +22,6 @@ The game was code in coffeescript using the html 5 canvas element.
   
 Test in Mac OSX Chrome, Firefox and Safari browsers.  Should run find in IE 10 (should). 
 
-If the game is sluggish in fullscreen try to run it in smaller window (Dont't forget to reload the page after resize).
+If the game is sluggish in fullscreen try to run it in smaller window (Dont't forget to reload the page after resize).  The bigger the canvas element is, the longer it take to render each frame.  If you can, go fullscreen for a greater experience.
 
 TOjam was a real fun experience for me, tks Jim!
