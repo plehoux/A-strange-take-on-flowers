@@ -1,0 +1,92 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  margin: 0;
+  padding: 0; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+@font-face {
+  font-family: Mate SC;
+  src: url(/lib/fonts/Mate-SC-Regular/MateSC-Regular.otf); }
+
+body {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-family: 'Mate SC','Arial', serif; }
+
+@media screen and (max-width: 640px) {
+  body {
+    font-size: 10px; } }
+div#content {
+  height: 100%;
+  width: 100%;
+  position: absolute; }
+  div#content div#infos {
+    height: 100%;
+    width: 100%;
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    display: -moz-box;
+    -moz-box-pack: center;
+    -moz-box-align: center;
+    display: -ms-box;
+    -ms-box-pack: center;
+    -ms-box-align: center;
+    display: box;
+    box-pack: center;
+    box-align: center;
+    text-transform: lowercase;
+    text-align: center; }
+    div#content div#infos hgroup {
+      margin-bottom: 2em;
+      width: 100%; }
+      div#content div#infos hgroup h1 {
+        width: 100%;
+        font-size: 4em;
+        cursor: default;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); }
+      div#content div#infos hgroup h2 {
+        font-size: 1em;
+        text-align: right;
+        cursor: default;
+        margin: 1em; }
+    div#content div#infos div#buttons {
+      color: #000;
+      font-size: 2em; }
+      div#content div#infos div#buttons a {
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+        color: #000;
+        display: inline;
+        text-decoration: none;
+        text-align: center;
+        margin: 40px auto;
+        cursor: pointer; }
+      div#content div#infos div#buttons a.selected {
+        font-size: 1.3em; }
+      div#content div#infos div#buttons a:hover {
+        color: #000; }
