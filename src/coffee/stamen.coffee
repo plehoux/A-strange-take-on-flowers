@@ -3,16 +3,16 @@ class Stamen extends Object
   @SPEED  = 2
   constructor:(canvas,ctx,angle,x,y,color="#ccc")->
     super(canvas,ctx)
-    @destroy = false
-    @radius  = Stamen.RADIUS
-    @angle   = angle
-    @color   = color
-    @x       = x
-    @y       = y
-    @vX = Math.cos(@angle)*Stamen.SPEED
-    @vY = Math.sin(@angle)*Stamen.SPEED
-    @aX = 0
-    @aY = 0
+    @destroy    = false
+    @radius     = Stamen.RADIUS
+    @angle      = angle
+    @color      = color
+    @x          = x
+    @y          = y
+    @vX         = Math.cos(@angle)*Stamen.SPEED
+    @vY         = Math.sin(@angle)*Stamen.SPEED
+    @aX         = 0
+    @aY         = 0
     @setTimeout = false
 
   update:->

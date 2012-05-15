@@ -18,7 +18,7 @@ The game could be describe as an anti-shooter where instead of avoiding 'bullets
   
 There is no timer, the game end after flowers collide into each other 10 times.  
 
-The game was code in coffeescript using the html 5 canvas element.  
+The game was code in coffeescript using the html canvas element.  
   
 Test in Mac OSX Chrome, Firefox and Safari browsers.  Should run find in IE 10 (should). 
 

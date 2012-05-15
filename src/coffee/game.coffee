@@ -19,30 +19,28 @@ class Game
                      "Ready?"]
                     
   constructor:(canvas)->
-    @birdsSound = new Audio("lib/sounds/bg.m4a");
-    @birdsSound.loop = "loop"
-    #@birdsSound.play()
-    @body = document.getElementsByTagName('body')[0]
-    @h1 = document.getElementsByTagName('h1')[0]
-    @h2 = document.getElementsByTagName('h2')[0]
-    @content = document.getElementById('content')
-    @buttons = document.getElementById('buttons')
-    @playButton = document.getElementById("play")
-    @tutorialButton = document.getElementById("tutorial")
-    @canvas = document.getElementById(canvas)
-   #@content.style.marginTop = @canvas.height/2+"px"
-    @collisionBuffer = false
-    @collision = 0
+    @birdsSound                = new Audio("lib/sounds/bg.m4a");
+    @birdsSound.loop           = "loop"
+    @body                      = document.getElementsByTagName('body')[0]
+    @h1                        = document.getElementsByTagName('h1')[0]
+    @h2                        = document.getElementsByTagName('h2')[0]
+    @content                   = document.getElementById('content')
+    @buttons                   = document.getElementById('buttons')
+    @playButton                = document.getElementById("play")
+    @tutorialButton            = document.getElementById("tutorial")
+    @canvas                    = document.getElementById(canvas)
+    @collisionBuffer           = false
+    @collision                 = 0
     @displayCollisionIndicator = false
-    @flowers = []
+    @flowers                   = []
     @initCanvas(@canvas)
+    @birdsSound.play()
     @titleScreen()
     setInterval(=>
       @update()
     ,16)
 
   tutorial:->
-    #window.removeEventListener('keydown',@titleScreenEvent)
     @displayCollisionIndicator = true
     @clearTitle()
     @h2.innerHTML = "Press space to skip"
@@ -51,7 +49,7 @@ class Game
     window.addEventListener('keydown',@skipTutorialEvent)
 
   skipTutorialEvent:(event)=>
-    @showTutorialStep() if event.keyCode == 32
+    @showTutorialStep() if event.keyCode == 32 or  event.keyCode == 13
 
   showTutorialStep:->
     @flashBg()
@@ -77,13 +75,13 @@ class Game
     @buttons.style.display = "block"
     window.addEventListener('keydown',@titleScreenEvent)
 
-
   titleScreenEvent:(event)=>
     @switchButton() if event.keyCode == 37 or event.keyCode == 39
-    if event.keyCode == 32
+    if event.keyCode == 32 or event.keyCode == 13
       window.removeEventListener('keydown',@titleScreenEvent)
       @play()     if @playButton.hasClass('selected')
       @tutorial() if @tutorialButton.hasClass('selected')
+  
  
   switchButton:->
     if @tutorialButton.hasClass('selected')
