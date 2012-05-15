@@ -17,7 +17,6 @@ class Trillium extends Flower
           when 13 then @force   = true
       )
     window.addEventListener('keyup',(event)=>
-        console.log event.keyCode
         switch event.keyCode 
           when 37 then @goLeft  = false
           when 38 then @goUp    = false
