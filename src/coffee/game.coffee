@@ -21,7 +21,7 @@ class Game
   constructor:(canvas)->
     @birdsSound = new Audio("lib/sounds/bg.m4a");
     @birdsSound.loop = "loop"
-    #@birdsSound.play()
+    @birdsSound.play()
     @body = document.getElementsByTagName('body')[0]
     @h1 = document.getElementsByTagName('h1')[0]
     @h2 = document.getElementsByTagName('h2')[0]
@@ -30,7 +30,6 @@ class Game
     @playButton = document.getElementById("play")
     @tutorialButton = document.getElementById("tutorial")
     @canvas = document.getElementById(canvas)
-   #@content.style.marginTop = @canvas.height/2+"px"
     @collisionBuffer = false
     @collision = 0
     @displayCollisionIndicator = false
@@ -42,7 +41,6 @@ class Game
     ,16)
 
   tutorial:->
-    #window.removeEventListener('keydown',@titleScreenEvent)
     @displayCollisionIndicator = true
     @clearTitle()
     @h2.innerHTML = "Press space to skip"
@@ -80,7 +78,7 @@ class Game
 
   titleScreenEvent:(event)=>
     @switchButton() if event.keyCode == 37 or event.keyCode == 39
-    if event.keyCode == 32
+    if event.keyCode == 32 or event.keyCode == 13
       window.removeEventListener('keydown',@titleScreenEvent)
       @play()     if @playButton.hasClass('selected')
       @tutorial() if @tutorialButton.hasClass('selected')
