@@ -81,6 +81,7 @@ class Game
       window.removeEventListener('keydown',@titleScreenEvent)
       @play()     if @playButton.hasClass('selected')
       @tutorial() if @tutorialButton.hasClass('selected')
+  
  
   switchButton:->
     if @tutorialButton.hasClass('selected')

@@ -17,7 +17,7 @@ class Flower extends Object
     @goRight      = false
     @goDown       = false
     @loadCount    = 240
-    @points       = 0
+    @gamepad      = false
     @auto         = auto
     @angle        = 1
     @ctx          = ctx
@@ -135,5 +135,28 @@ class Flower extends Object
     @vX = @vX+Flower.START_VELOCITY if @vX < Flower.MAX_VELOCITY
   down:->
     @vY = @vY+Flower.START_VELOCITY if @vY < Flower.MAX_VELOCITY
+
+  updateGamepad:->
+    if @gamepad? and !@auto
+      if @gamepad.axes[1] < -0.5
+        @goLeft = true
+      else
+        @goLeft = false
+      if @gamepad.axes[1] > 0.5
+        @goRight = true
+      else
+        @goRight = false
+      if @gamepad.axes[2] < -0.5
+        @goUp = true
+      else
+        @goUp = false
+      if @gamepad.axes[2] > 0.5
+        @goDown = true
+      else
+        @goDown = false
+      if @gamepad.buttons[2] == 1
+        @force = true
+      else
+        @force = false
 
 this.Flower = Flower

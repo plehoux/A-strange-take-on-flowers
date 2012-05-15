@@ -4,6 +4,11 @@ class Trillium extends Flower
     if color then @color = color else @color = Trillium.COLOR
     super(id,ctx,canvas,emit,attract,auto)
 
+  update:(antagonist)->
+    if @gamepad.index == 1
+      @updateGamepad()
+    super(antagonist)
+
   draw:->
     super(@color)
 
@@ -24,5 +29,8 @@ class Trillium extends Flower
           when 40 then @goDown  = false
           when 13 then @force   = false
       )
+
+  initGamepad:(event)=>
+    @gamepad = event.gamepad
 
 this.Trillium = Trillium
