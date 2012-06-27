@@ -20,6 +20,7 @@ class Flower extends Object
     @gamepad      = false
     @auto         = auto
     @angle        = 1
+    @points       = 0
     @ctx          = ctx
     @vX           = 0
     @vY           = 0
@@ -113,6 +114,7 @@ class Flower extends Object
     for stamen in antagonist.stamens
       if @testColision(stamen.x,stamen.y,stamen.radius)
         stamen.destroy = true
+        console.log @points
         @points++
 
     @points = 0 if @points > 400 and @auto
@@ -122,6 +124,7 @@ class Flower extends Object
     if collision and !@auto and @loadCount <= 0  then 1 else 0
 
   draw:(color="#000")->
+    console.log @points
     @drawCircle(@x,@y,@points/10+25,"rgba("+color+",0.1)")
     @drawCircle(@x,@y,@loadCount,"rgba("+color+",0.08)") if !@auto and @loadCount > 0
     stamen.draw()for stamen in @stamens
